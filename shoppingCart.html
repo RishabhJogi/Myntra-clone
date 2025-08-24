@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart | Myntra Clone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    .cart-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 32px;
+    }
+    .cart-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 24px;
+      color: #282c3f;
+    }
+    .cart-items {
+      border-bottom: 1px solid #eaeaea;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .cart-item:last-child {
+      margin-bottom: 0;
+    }
+    .item-img {
+      width: 80px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-right: 20px;
+      border: 1px solid #eee;
+    }
+    .item-details {
+      flex: 1;
+    }
+    .item-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #282c3f;
+      margin-bottom: 6px;
+    }
+    .item-desc {
+      font-size: 0.95rem;
+      color: #7d818c;
+      margin-bottom: 8px;
+    }
+    .item-qty {
+      font-size: 0.95rem;
+      color: #535766;
+      margin-bottom: 8px;
+    }
+    .item-price {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ff3e6c;
+    }
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #ff3e6c;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 16px;
+      font-size: 0.95rem;
+    }
+    .cart-summary {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 24px;
+    }
+    .summary-details {
+      background: #f5f5f6;
+      padding: 20px 32px;
+      border-radius: 8px;
+      min-width: 280px;
+    }
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    .summary-row.total {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #282c3f;
+    }
+    .checkout-btn {
+      display: block;
+      width: 100%;
+      background: #ff3e6c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 14px 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 18px;
+      transition: background 0.2s;
+    }
+    .checkout-btn:hover {
+      background: #e62e5c;
+    }
+    @media (max-width: 600px) {
+      .cart-container {
+        padding: 12px;
+      }
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .item-img {
+        margin-bottom: 10px;
+      }
+      .cart-summary {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .summary-details {
+        padding: 14px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-container">
+    <div class="cart-title">Shopping Cart</div>
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1234567/2021/7/1/abcd.jpg" alt="Product" class="item-img">
+        <div class="item-details">
+          <div class="item-title">Men Slim Fit Shirt</div>
+          <div class="item-desc">Blue, Size: M</div>
+          <div class="item-qty">Qty: 1</div>
+          <div class="item-price">₹799</div>
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+      <div class="cart-item">
+        <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2345678/2021/7/1/efgh.jpg" alt="Product" class="item-img">
+        <div class="item-details">
+          <div class="item-title">Women Printed Dress</div>
+          <div class="item-desc">Red, Size: S</div>
+          <div class="item-qty">Qty: 2</div>
+          <div class="item-price">₹1,299</div>
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <div class="summary-details">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>₹3,397</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span>₹0</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span>₹3,397</span>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
